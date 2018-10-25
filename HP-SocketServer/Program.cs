@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Windows.Forms;
 
-namespace HP_SocketTest
+namespace HP_SocketServer
 {
     static class Program
     {
@@ -15,7 +15,7 @@ namespace HP_SocketTest
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new Client());
+            Application.Run(new Server());
         }
     }
 }

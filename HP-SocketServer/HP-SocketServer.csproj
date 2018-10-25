@@ -4,10 +4,10 @@
   <PropertyGroup>
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
-    <ProjectGuid>{FCB1B982-EC10-42A1-84C8-D849014276BA}</ProjectGuid>
+    <ProjectGuid>{F52C0EC3-3F71-44A0-9D1E-10617F2A0D58}</ProjectGuid>
     <OutputType>WinExe</OutputType>
-    <RootNamespace>HP_SocketTest</RootNamespace>
-    <AssemblyName>HP-SocketTest</AssemblyName>
+    <RootNamespace>HP_SocketServer</RootNamespace>
+    <AssemblyName>HP-SocketServer</AssemblyName>
     <TargetFrameworkVersion>v4.0</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
     <Deterministic>true</Deterministic>
@@ -83,16 +83,22 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Client.cs">
+    <Compile Include="ChatWith.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Client.Designer.cs">
-      <DependentUpon>Client.cs</DependentUpon>
+    <Compile Include="ChatWith.Designer.cs">
+      <DependentUpon>ChatWith.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Server.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Server.Designer.cs">
+      <DependentUpon>Server.cs</DependentUpon>
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <EmbeddedResource Include="Client.resx">
-      <DependentUpon>Client.cs</DependentUpon>
+    <EmbeddedResource Include="ChatWith.resx">
+      <DependentUpon>ChatWith.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
@@ -102,7 +108,11 @@
     <Compile Include="Properties\Resources.Designer.cs">
       <AutoGen>True</AutoGen>
       <DependentUpon>Resources.resx</DependentUpon>
+      <DesignTime>True</DesignTime>
     </Compile>
+    <EmbeddedResource Include="Server.resx">
+      <DependentUpon>Server.cs</DependentUpon>
+    </EmbeddedResource>
     <None Include="HPSockertx64\ssl-cert\ca.crt" />
     <None Include="HPSockertx64\ssl-cert\ca.key" />
     <None Include="HPSockertx64\ssl-cert\ca.pem" />
